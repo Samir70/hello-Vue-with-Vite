@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import SearchResults from './SearchResults.vue';
 
 // defineProps({
 //   msg: String
@@ -17,6 +18,7 @@ const reset = () => {
     <input type="text" placeholder="Filter Search" v-model="query" />
     <p>{{ query }}</p>
     <button v-on:click="reset">Reset</button>
+    <SearchResults v-bind:query="query" />
   </div>
 </template>
 
